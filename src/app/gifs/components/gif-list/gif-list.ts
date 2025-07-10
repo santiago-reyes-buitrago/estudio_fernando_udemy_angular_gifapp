@@ -1,9 +1,6 @@
 import {Component, input} from '@angular/core';
 import {GifListItem} from '../gif-list-item/gif-list-item';
-
-interface Gif {
-  url: string;
-}
+import {Gif} from '../../services/gif.interface';
 
 @Component({
   selector: 'gif-list',
@@ -14,5 +11,5 @@ interface Gif {
   styleUrl: './gif-list.css'
 })
 export class GifList {
-  gifInfo = input.required< string[]>()
+  gifInfo = input.required< Gif[]>()
 }
